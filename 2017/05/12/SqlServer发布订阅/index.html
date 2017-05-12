@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="发布,订阅" />
 
 
 
@@ -90,16 +90,32 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）  下一步，选择需要同步的表或者视图  下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下">
+<meta name="keywords" content="发布,订阅">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://949081653.cn/2017/05/09/hello-world/index.html">
+<meta property="og:title" content="SqlServer发布订阅">
+<meta property="og:url" content="http://949081653.cn/2017/05/12/SqlServer发布订阅/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-05-09T07:18:58.109Z">
+<meta property="og:description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）  下一步，选择需要同步的表或者视图  下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下">
+<meta property="og:image" content="http://949081653.cn/images/first.png">
+<meta property="og:image" content="http://949081653.cn/images/second.png">
+<meta property="og:image" content="http://949081653.cn/images/three.png">
+<meta property="og:image" content="http://949081653.cn/images/four.png">
+<meta property="og:image" content="http://949081653.cn/images/five.png">
+<meta property="og:image" content="http://949081653.cn/images/six.png">
+<meta property="og:image" content="http://949081653.cn/images/seven.png">
+<meta property="og:image" content="http://949081653.cn/images/eight.png">
+<meta property="og:image" content="http://949081653.cn/images/nine.png">
+<meta property="og:image" content="http://949081653.cn/images/ten.png">
+<meta property="og:image" content="http://949081653.cn/images/eleven.png">
+<meta property="og:image" content="http://949081653.cn/images/eleven.png">
+<meta property="og:image" content="http://949081653.cn/images/twelve.png">
+<meta property="og:image" content="http://949081653.cn/images/13.png">
+<meta property="og:updated_time" content="2017-05-12T08:29:26.638Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="SqlServer发布订阅">
+<meta name="twitter:description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）  下一步，选择需要同步的表或者视图  下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下">
+<meta name="twitter:image" content="http://949081653.cn/images/first.png">
 
 
 
@@ -127,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://949081653.cn/2017/05/09/hello-world/"/>
+  <link rel="canonical" href="http://949081653.cn/2017/05/12/SqlServer发布订阅/"/>
 
 
 
 
 
-  <title>Hello World | Hexo</title>
+  <title>SqlServer发布订阅 | Hexo</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -252,7 +268,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/05/09/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/05/12/SqlServer发布订阅/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Liudade">
@@ -269,7 +285,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">SqlServer发布订阅</h1>
         
 
         <div class="post-meta">
@@ -281,8 +297,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-09T15:18:58+08:00">
-                2017-05-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T14:30:21+08:00">
+                2017-05-12
               </time>
             
 
@@ -291,6 +307,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SqlServer数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">SqlServer数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -316,15 +354,17 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="SqlServer发布订阅"><a href="#SqlServer发布订阅" class="headerlink" title="SqlServer发布订阅"></a>SqlServer发布订阅</h2><ol>
+<li>环境准备<br>需要准备两台服务器、创建两个数据库advocate、follow</li>
+<li>在advocate数据库中点击复制–&gt;右击本地发布新建发布<br><img src="/images/first.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步选择自己所要同步的数据库<br><img src="/images/second.png" alt="&quot;新建发布&quot;"> </li>
+<li>选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）<br><img src="/images/three.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步，选择需要同步的表或者视图<br><img src="/images/four.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下一步，需要则点添加出现后面填写语句地方<br><img src="/images/five.png" alt="&quot;新建发布&quot;"><br><img src="/images/six.png" alt="&quot;新建发布&quot;"><br><img src="/images/seven.png" alt="&quot;新建发布&quot;"> </li>
+<li>继续下一步。勾选下面两个选项，并自己设定下计划、需要多久同步一次数据<br><img src="/images/eight.png" alt="&quot;新建发布&quot;"><br><img src="/images/nine.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步，安全设置，使用实际需要的数据库登录密码<br><img src="/images/ten.png" alt="&quot;新建发布&quot;"><br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"> </li>
+<li>继续，将发布的名字设定一下<br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"><br><img src="/images/twelve.png" alt="&quot;新建发布&quot;"><br><img src="/images/13.png" alt="&quot;新建发布&quot;"><br>接下来对follow数据进行订阅操作</li>
+</ol>
 
       
     </div>
@@ -352,6 +392,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/sqlServer/" rel="tag"># sqlServer</a>
+          
+            <a href="/tags/数据库/" rel="tag"># 数据库</a>
+          
+        </div>
+      
 
       
         
@@ -361,15 +409,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/05/09/second/" rel="next" title="second">
+                <i class="fa fa-chevron-left"></i> second
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/05/09/myBlog/" rel="prev" title="myBlog">
-                myBlog <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -498,7 +546,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SqlServer发布订阅"><span class="nav-number">1.</span> <span class="nav-text">SqlServer发布订阅</span></a></li></ol></div>
             
 
           </div>

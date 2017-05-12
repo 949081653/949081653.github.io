@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -250,6 +250,150 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/05/12/SqlServer发布订阅/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liudade">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/05/12/SqlServer发布订阅/" itemprop="url">SqlServer发布订阅</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T14:30:21+08:00">
+                2017-05-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SqlServer数据库/" itemprop="url" rel="index">
+                    <span itemprop="name">SqlServer数据库</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="SqlServer发布订阅"><a href="#SqlServer发布订阅" class="headerlink" title="SqlServer发布订阅"></a>SqlServer发布订阅</h2><ol>
+<li>环境准备<br>需要准备两台服务器、创建两个数据库advocate、follow</li>
+<li>在advocate数据库中点击复制–&gt;右击本地发布新建发布<br><img src="/images/first.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步选择自己所要同步的数据库<br><img src="/images/second.png" alt="&quot;新建发布&quot;"> </li>
+<li>选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）<br><img src="/images/three.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步，选择需要同步的表或者视图<br><img src="/images/four.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下一步，需要则点添加出现后面填写语句地方<br><img src="/images/five.png" alt="&quot;新建发布&quot;"><br><img src="/images/six.png" alt="&quot;新建发布&quot;"><br><img src="/images/seven.png" alt="&quot;新建发布&quot;"> </li>
+<li>继续下一步。勾选下面两个选项，并自己设定下计划、需要多久同步一次数据<br><img src="/images/eight.png" alt="&quot;新建发布&quot;"><br><img src="/images/nine.png" alt="&quot;新建发布&quot;"> </li>
+<li>下一步，安全设置，使用实际需要的数据库登录密码<br><img src="/images/ten.png" alt="&quot;新建发布&quot;"><br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"> </li>
+<li>继续，将发布的名字设定一下<br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"><br><img src="/images/twelve.png" alt="&quot;新建发布&quot;"><br><img src="/images/13.png" alt="&quot;新建发布&quot;"><br>接下来对follow数据进行订阅操作</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/05/09/second/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -279,7 +423,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-09T15:31:19+08:00">
                 2017-05-09
@@ -390,7 +534,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-09T15:22:31+08:00">
                 2017-05-09
@@ -501,7 +645,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-09T15:18:58+08:00">
                 2017-05-09
@@ -628,14 +772,32 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
@@ -683,7 +845,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
