@@ -90,13 +90,13 @@
 
 
 
-<meta name="description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）  下一步，选择需要同步的表或者视图  下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下">
+<meta name="description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow需要在另外一台服务器上，以机器名进行登录访问数据库，需要将数据库中方面–》服务器配置–》RemoteDacEnabled修改为false 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面">
 <meta name="keywords" content="发布,订阅">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SqlServer发布订阅">
 <meta property="og:url" content="http://949081653.cn/2017/05/12/SqlServer发布订阅/index.html">
 <meta property="og:site_name" content="King">
-<meta property="og:description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）  下一步，选择需要同步的表或者视图  下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下">
+<meta property="og:description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow需要在另外一台服务器上，以机器名进行登录访问数据库，需要将数据库中方面–》服务器配置–》RemoteDacEnabled修改为false 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面">
 <meta property="og:image" content="http://949081653.cn/images/first.png">
 <meta property="og:image" content="http://949081653.cn/images/second.png">
 <meta property="og:image" content="http://949081653.cn/images/three.png">
@@ -125,10 +125,10 @@
 <meta property="og:image" content="http://949081653.cn/images/25.png">
 <meta property="og:image" content="http://949081653.cn/images/26.png">
 <meta property="og:image" content="http://949081653.cn/images/27.png">
-<meta property="og:updated_time" content="2017-05-16T02:55:21.494Z">
+<meta property="og:updated_time" content="2017-05-22T01:49:22.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SqlServer发布订阅">
-<meta name="twitter:description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）  下一步，选择需要同步的表或者视图  下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下">
+<meta name="twitter:description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow需要在另外一台服务器上，以机器名进行登录访问数据库，需要将数据库中方面–》服务器配置–》RemoteDacEnabled修改为false 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面">
 <meta name="twitter:image" content="http://949081653.cn/images/first.png">
 
 
@@ -369,7 +369,7 @@
 
       
         <h2 id="SqlServer发布订阅"><a href="#SqlServer发布订阅" class="headerlink" title="SqlServer发布订阅"></a>SqlServer发布订阅</h2><ol>
-<li>环境准备<br>需要准备两台服务器、创建两个数据库advocate、follow</li>
+<li>环境准备<br>需要准备两台服务器、创建两个数据库advocate、follow<br>需要在另外一台服务器上，以机器名进行登录访问数据库，需要将数据库中方面–》服务器配置–》RemoteDacEnabled修改为false</li>
 <li>在advocate数据库中点击复制–&gt;右击本地发布新建发布<br><img src="/images/first.png" alt="&quot;新建发布&quot;"> </li>
 <li>下一步选择自己所要同步的数据库<br><img src="/images/second.png" alt="&quot;新建发布&quot;"> </li>
 <li>选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）<br><img src="/images/three.png" alt="&quot;新建发布&quot;"> </li>
@@ -384,6 +384,53 @@
 <li>设置服务器的连接<br><img src="/images/22.png" alt="&quot;新建发布&quot;"><br><img src="/images/23.png" alt="&quot;新建发布&quot;"> </li>
 <li>然后一直到完成<br><img src="/images/24.png" alt="&quot;新建发布&quot;"><br><img src="/images/25.png" alt="&quot;新建发布&quot;"><br><img src="/images/26.png" alt="&quot;新建发布&quot;"><br><img src="/images/27.png" alt="&quot;新建发布&quot;"><br>第一次熟悉SqlServer的订阅发布进行数据库的同步，后续还需要继续完善测试性能问题，还有中间遇到的一些错误</li>
 </ol>
+<p>SQL SERVER 2005中的同步复制技术 </p>
+<p>一、准备工作： </p>
+<ol>
+<li><p>建立一个 WINDOWS 用户，设置为管理员权限，并设置密码，作为发布快照文件的有效访问用户。 </p>
+</li>
+<li><p>在SQL SERVER下实现发布服务器和订阅服务器的通信正常（即可以互访）。打开1433端口，在防火墙中设特例 </p>
+</li>
+<li><p>在发布服务器上建立一个共享目录，作为发布快照文件的存放目录。例如：在D盘根目录下建文件夹名为SqlCopy </p>
+</li>
+<li><p>设置SQL 代理（发布服务器和订阅服务器均设置） </p>
+</li>
+</ol>
+<p>打开服务(控制面板—管理工具—服务) </p>
+<p>—右击SQLSERVER AGENT—属性—登录—选择“此帐户“ </p>
+<p>—输入或选择第一步中创建的WINDOWS 用户 </p>
+<p>—“密码“中输入该用户密码 </p>
+<ol>
+<li>设置SQL SERVER 身份验证，解决连接时的权限问题（发布、订阅服务器均设置） </li>
+</ol>
+<p>步骤为：对象资源管理器—-右击SQL实例—–属性—-安全性—-服务器身份验证——选“SQL Server和WINDOWS“，然后点确定 </p>
+<ol>
+<li><p>开启SQL Server 2005的网络协议TCP/IP和管道命名协议并重启网络服务。 </p>
+</li>
+<li><p>在SQL Server中创建步骤1中对应的系统用户登陆名，作为发布数据库的拥有者（设置为dbo_owner和public）。 </p>
+</li>
+<li><p>以系统超级用户sa登陆SQL Server建立数据库和表。 </p>
+</li>
+<li><p>发布服务器和订阅服务器互相注册 </p>
+</li>
+</ol>
+<p>步骤如下：视图—-单击以注册服务器—-右键数据库引擎—-新建服务器注册—–填写要注册的远程服务器名称——身份验证选“SQL Server验证“—–用户名(sa) 密码——创建组（也可不建）—–完成。 </p>
+<ol>
+<li>对于只能用IP，不能用计算机名的，为其注册服务器别名 </li>
+</ol>
+<p>二、开始： </p>
+<p>发布服务器配置（在发布服务器上配置发布和订阅） </p>
+<ol>
+<li><p>选择 复制 节点 </p>
+</li>
+<li><p>右键本地发布 —-下一步———系统弹出对话框看提示—-直到“指定快照文件夹“ </p>
+</li>
+</ol>
+<p>—-在“快照文件夹“中输入准备工作中创建的目录(指向步骤3所建的共享文件夹)——选择发布数据库——-选择发布类型——-选择订阅服务器类型——-选择要发布的对象——设置快照代理——-填写发布名称。 </p>
+<ol>
+<li>右键本地订阅——–选择发布服务器——-选择订阅方式（如果是在服务器方订阅的话选择推送订阅反之选择请求订阅）——-填加订阅服务器——–选择代理计划（一般选择连续运行）———其余选择默认项。 </li>
+</ol>
+<p>至此, SQL SERVER 2005 同步复制就完成了。使用复制技术，用户可以将一份客户端的数据发布到多台服务器上，从而使不同的服务器用户都可以在权限的许可的范围内共享这份数据。复制技术可以确保分布在不同地点的数据自动同步更新，从而保证数据的一致性,就无需编程实现客户端和服务器端数据同步了！大大提高了工作效率！</p>
 
       
     </div>
