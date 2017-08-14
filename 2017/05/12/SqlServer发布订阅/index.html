@@ -125,7 +125,8 @@
 <meta property="og:image" content="http://949081653.cn/images/25.png">
 <meta property="og:image" content="http://949081653.cn/images/26.png">
 <meta property="og:image" content="http://949081653.cn/images/27.png">
-<meta property="og:updated_time" content="2017-05-22T01:49:22.516Z">
+<meta property="og:image" content="http://949081653.cn/images/28.png">
+<meta property="og:updated_time" content="2017-05-24T03:05:50.389Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SqlServer发布订阅">
 <meta name="twitter:description" content="SqlServer发布订阅 环境准备需要准备两台服务器、创建两个数据库advocate、follow需要在另外一台服务器上，以机器名进行登录访问数据库，需要将数据库中方面–》服务器配置–》RemoteDacEnabled修改为false 在advocate数据库中点击复制–&amp;gt;右击本地发布新建发布  下一步选择自己所要同步的数据库  选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面">
@@ -229,7 +230,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -239,7 +240,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -309,7 +310,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T14:30:21+08:00">
                 2017-05-12
@@ -330,7 +331,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -379,12 +380,16 @@
 <li>下一步，安全设置，使用实际需要的数据库登录密码<br><img src="/images/ten.png" alt="&quot;新建发布&quot;"><br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"> </li>
 <li>继续，将发布的名字设定一下<br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"><br><img src="/images/twelve.png" alt="&quot;新建发布&quot;"><br><img src="/images/13.png" alt="&quot;新建发布&quot;"><br><img src="/images/14.png" alt="&quot;新建发布&quot;"><br>接下来对follow数据进行订阅操作</li>
 <li>创建一个订阅，需要选择创建发布的服务器<br><img src="/images/15.png" alt="&quot;新建发布&quot;"><br><img src="/images/16.png" alt="&quot;新建发布&quot;"><br><img src="/images/17.png" alt="&quot;新建发布&quot;"><br>点击浏览更多<br><img src="/images/18.png" alt="&quot;新建发布&quot;"><br>选择网络服务器<br><img src="/images/19.png" alt="&quot;新建发布&quot;"> </li>
-<li>选择下一步，选择在分发服务器上运行所有代理<br><img src="/images/20.png" alt="&quot;新建发布&quot;"> </li>
+<li>选择下一步，选择在分发服务器上运行所有代理<br>当需要选择在 “在其订阅服务器上运行每个代理（请求订阅）”，需要在两台服务器上，创建一个系统用户，用户名和密码弄同样。<br>在启动服务，查看SqlServer代理，属性进行设置使用刚刚创建的用户名进行运行。</li>
+</ol>
+<p><img src="/images/20.png" alt="&quot;新建发布&quot;"> </p>
+<ol>
 <li>选择需要订阅的数据库<br><img src="/images/21.png" alt="&quot;新建发布&quot;"> </li>
 <li>设置服务器的连接<br><img src="/images/22.png" alt="&quot;新建发布&quot;"><br><img src="/images/23.png" alt="&quot;新建发布&quot;"> </li>
 <li>然后一直到完成<br><img src="/images/24.png" alt="&quot;新建发布&quot;"><br><img src="/images/25.png" alt="&quot;新建发布&quot;"><br><img src="/images/26.png" alt="&quot;新建发布&quot;"><br><img src="/images/27.png" alt="&quot;新建发布&quot;"><br>第一次熟悉SqlServer的订阅发布进行数据库的同步，后续还需要继续完善测试性能问题，还有中间遇到的一些错误</li>
 </ol>
-<p>SQL SERVER 2005中的同步复制技术 </p>
+<p>发布成功后<br>再对应订阅服务器中，右键订阅，选择属性,选择快照位置，文件夹填写发布服务器上面快照存储的文件夹，（发布服务器快照文件夹需要配置共享）<br><img src="/images/28.png" alt="&quot;新建发布&quot;"> </p>
+<p>SQL SERVER 2005中的同步复制技术<br>当需要进行服务器名称进行访问内网另一台时，需要修改host文件，新加一行<br>IP地址 服务器名</p>
 <p>一、准备工作： </p>
 <ol>
 <li><p>建立一个 WINDOWS 用户，设置为管理员权限，并设置密码，作为发布快照文件的有效访问用户。 </p>
@@ -485,6 +490,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/06/17/正则表达式/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -532,10 +541,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -555,8 +564,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -566,8 +575,8 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
@@ -577,8 +586,8 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
@@ -644,7 +653,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
