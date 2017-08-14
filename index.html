@@ -340,7 +340,29 @@
       
         
           
-            
+            <h2 id="git日常用法"><a href="#git日常用法" class="headerlink" title="git日常用法"></a>git日常用法</h2><ol>
+<li><p>去自己的工作分支<br>$ git checkout work</p>
+</li>
+<li><p>工作<br>….</p>
+</li>
+<li><p>提交工作分支的修改<br>$ git commit -a</p>
+</li>
+<li><p>回到主分支<br>$ git checkout master</p>
+</li>
+<li><p>获取远程最新的修改，此时不会产生冲突<br>$ git pull</p>
+</li>
+<li><p>回到工作分支<br>$ git checkout work</p>
+</li>
+<li><p>用rebase合并主干的修改，如果有冲突在此时解决<br>$ git rebase master</p>
+</li>
+<li><p>回到主分支<br>$ git checkout master</p>
+</li>
+<li><p>合并工作分支的修改，此时不会产生冲突。<br>$ git merge work</p>
+</li>
+<li><p>提交到远程主干<br>$ git push</p>
+</li>
+</ol>
+
           
         
       
