@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="springSecurity,登录" />
 
 
 
@@ -90,13 +90,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="King">
-<meta property="og:url" content="http://949081653.cn/index.html">
+<meta name="description" content="1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置123456789protected void configure(HttpSecurity http) throws Exception &amp;#123;    http.authorizeRequests()        .anyRequest(">
+<meta name="keywords" content="springSecurity,登录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springSecurity登录验证">
+<meta property="og:url" content="http://949081653.cn/2018/05/31/登录验证/index.html">
 <meta property="og:site_name" content="King">
+<meta property="og:description" content="1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置123456789protected void configure(HttpSecurity http) throws Exception &amp;#123;    http.authorizeRequests()        .anyRequest(">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-31T11:25:45.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="King">
+<meta name="twitter:title" content="springSecurity登录验证">
+<meta name="twitter:description" content="1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置123456789protected void configure(HttpSecurity http) throws Exception &amp;#123;    http.authorizeRequests()        .anyRequest(">
 
 
 
@@ -124,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://949081653.cn/"/>
+  <link rel="canonical" href="http://949081653.cn/2018/05/31/登录验证/"/>
 
 
 
 
 
-  <title>King</title>
+  <title>springSecurity登录验证 | King</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -155,9 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -240,9 +243,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -268,9 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/31/登录验证/" itemprop="url">springSecurity登录验证</a></h1>
+          <h1 class="post-title" itemprop="name headline">springSecurity登录验证</h1>
         
 
         <div class="post-meta">
@@ -339,9 +340,7 @@
       
 
       
-        
-          
-            <h3 id="1、配置是在WebSecurityConfigurerAdapter中的configure-HttpSecurity-http-方法中提供一个默认的配置"><a href="#1、配置是在WebSecurityConfigurerAdapter中的configure-HttpSecurity-http-方法中提供一个默认的配置" class="headerlink" title="1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置"></a>1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">protected void configure(HttpSecurity http) throws Exception &#123;</span><br><span class="line">    http.authorizeRequests()</span><br><span class="line">        .anyRequest().authenticated()</span><br><span class="line">        .and()</span><br><span class="line">        .formLogin()</span><br><span class="line">        .and()</span><br><span class="line">        .httpBasic();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="1、配置是在WebSecurityConfigurerAdapter中的configure-HttpSecurity-http-方法中提供一个默认的配置"><a href="#1、配置是在WebSecurityConfigurerAdapter中的configure-HttpSecurity-http-方法中提供一个默认的配置" class="headerlink" title="1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置"></a>1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">protected void configure(HttpSecurity http) throws Exception &#123;</span><br><span class="line">    http.authorizeRequests()</span><br><span class="line">        .anyRequest().authenticated()</span><br><span class="line">        .and()</span><br><span class="line">        .formLogin()</span><br><span class="line">        .and()</span><br><span class="line">        .httpBasic();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上面的默认配置：</p>
 <ul>
 <li>确保我们应用所有请求都需要用户被认证</li>
@@ -412,628 +411,74 @@
 <p>虽然有一些很好的理由不直接暴露所有属性，用户可能任然需要更多高级配置，为了解决这个Spring Security引入了 ObjectPostProcessor 概念，用来修改或替换Java配置的对象实例。例如：如果你想在FilterSecurityInterceptor里配置filterSecurityPublishAuthorizationSuccess属性，你可以像下面一样：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">protected void configure(HttpSecurity http) throws Exception &#123;</span><br><span class="line">    http</span><br><span class="line">        .authorizeRequests()</span><br><span class="line">            .anyRequest().authenticated()</span><br><span class="line">            .withObjectPostProcessor(new ObjectPostProcessor&lt;FilterSecurityInterceptor&gt;() &#123;</span><br><span class="line">                public &lt;O extends FilterSecurityInterceptor&gt; O postProcess(</span><br><span class="line">                        O fsi) &#123;</span><br><span class="line">                    fsi.setPublishAuthorizationSuccess(true);</span><br><span class="line">                    return fsi;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/08/14/git日常用法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liudade">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/14/git日常用法/" itemprop="url">git日常用法</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-08-14T15:12:21+08:00">
-                2017-08-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/git日常用法/" itemprop="url" rel="index">
-                    <span itemprop="name">git日常用法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/springSecurity/" rel="tag"># springSecurity</a>
           
-
+            <a href="/tags/登录/" rel="tag"># 登录</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <h2 id="git日常用法"><a href="#git日常用法" class="headerlink" title="git日常用法"></a>git日常用法</h2><ol>
-<li><p>去自己的工作分支<br>$ git checkout work</p>
-</li>
-<li><p>工作<br>….</p>
-</li>
-<li><p>提交工作分支的修改<br>$ git commit -a</p>
-</li>
-<li><p>回到主分支<br>$ git checkout master</p>
-</li>
-<li><p>获取远程最新的修改，此时不会产生冲突<br>$ git pull</p>
-</li>
-<li><p>回到工作分支<br>$ git checkout work</p>
-</li>
-<li><p>用rebase合并主干的修改，如果有冲突在此时解决<br>$ git rebase master</p>
-</li>
-<li><p>回到主分支<br>$ git checkout master</p>
-</li>
-<li><p>合并工作分支的修改，此时不会产生冲突。<br>$ git merge work</p>
-</li>
-<li><p>提交到远程主干<br>$ git push</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/06/17/正则表达式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liudade">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/06/17/正则表达式/" itemprop="url">Untitled</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-17T22:31:27+08:00">
-                2017-06-17
-              </time>
+              <a href="/2017/08/14/git日常用法/" rel="next" title="git日常用法">
+                <i class="fa fa-chevron-left"></i> git日常用法
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/05/12/SqlServer发布订阅/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liudade">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/12/SqlServer发布订阅/" itemprop="url">SqlServer发布订阅</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-12T14:30:21+08:00">
-                2017-05-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/SqlServer数据库/" itemprop="url" rel="index">
-                    <span itemprop="name">SqlServer数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="SqlServer发布订阅"><a href="#SqlServer发布订阅" class="headerlink" title="SqlServer发布订阅"></a>SqlServer发布订阅</h2><ol>
-<li>环境准备<br>需要准备两台服务器、创建两个数据库advocate、follow<br>需要在另外一台服务器上，以机器名进行登录访问数据库，需要将数据库中方面–》服务器配置–》RemoteDacEnabled修改为false</li>
-<li>在advocate数据库中点击复制–&gt;右击本地发布新建发布<br><img src="/images/first.png" alt="&quot;新建发布&quot;"> </li>
-<li>下一步选择自己所要同步的数据库<br><img src="/images/second.png" alt="&quot;新建发布&quot;"> </li>
-<li>选择发布类型，这里我先使用快照发布（每个发布类型说明对应下面有）<br><img src="/images/three.png" alt="&quot;新建发布&quot;"> </li>
-<li>下一步，选择需要同步的表或者视图<br><img src="/images/four.png" alt="&quot;新建发布&quot;"> </li>
-<li>下一步第一张图是选择同步视图的时候的问题、下面是自己需要筛选的表数据，当然不需要则可以继续下一步，需要则点添加出现后面填写语句地方<br><img src="/images/five.png" alt="&quot;新建发布&quot;"><br><img src="/images/six.png" alt="&quot;新建发布&quot;"><br><img src="/images/seven.png" alt="&quot;新建发布&quot;"> </li>
-<li>继续下一步。勾选下面两个选项，并自己设定下计划、需要多久同步一次数据<br><img src="/images/eight.png" alt="&quot;新建发布&quot;"><br><img src="/images/nine.png" alt="&quot;新建发布&quot;"> </li>
-<li>下一步，安全设置，使用实际需要的数据库登录密码<br><img src="/images/ten.png" alt="&quot;新建发布&quot;"><br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"> </li>
-<li>继续，将发布的名字设定一下<br><img src="/images/eleven.png" alt="&quot;新建发布&quot;"><br><img src="/images/twelve.png" alt="&quot;新建发布&quot;"><br><img src="/images/13.png" alt="&quot;新建发布&quot;"><br><img src="/images/14.png" alt="&quot;新建发布&quot;"><br>接下来对follow数据进行订阅操作</li>
-<li>创建一个订阅，需要选择创建发布的服务器<br><img src="/images/15.png" alt="&quot;新建发布&quot;"><br><img src="/images/16.png" alt="&quot;新建发布&quot;"><br><img src="/images/17.png" alt="&quot;新建发布&quot;"><br>点击浏览更多<br><img src="/images/18.png" alt="&quot;新建发布&quot;"><br>选择网络服务器<br><img src="/images/19.png" alt="&quot;新建发布&quot;"> </li>
-<li>选择下一步，选择在分发服务器上运行所有代理<br>当需要选择在 “在其订阅服务器上运行每个代理（请求订阅）”，需要在两台服务器上，创建一个系统用户，用户名和密码弄同样。<br>在启动服务，查看SqlServer代理，属性进行设置使用刚刚创建的用户名进行运行。</li>
-</ol>
-<p><img src="/images/20.png" alt="&quot;新建发布&quot;"> </p>
-<ol>
-<li>选择需要订阅的数据库<br><img src="/images/21.png" alt="&quot;新建发布&quot;"> </li>
-<li>设置服务器的连接<br><img src="/images/22.png" alt="&quot;新建发布&quot;"><br><img src="/images/23.png" alt="&quot;新建发布&quot;"> </li>
-<li>然后一直到完成<br><img src="/images/24.png" alt="&quot;新建发布&quot;"><br><img src="/images/25.png" alt="&quot;新建发布&quot;"><br><img src="/images/26.png" alt="&quot;新建发布&quot;"><br><img src="/images/27.png" alt="&quot;新建发布&quot;"><br>第一次熟悉SqlServer的订阅发布进行数据库的同步，后续还需要继续完善测试性能问题，还有中间遇到的一些错误</li>
-</ol>
-<p>发布成功后<br>再对应订阅服务器中，右键订阅，选择属性,选择快照位置，文件夹填写发布服务器上面快照存储的文件夹，（发布服务器快照文件夹需要配置共享）<br><img src="/images/28.png" alt="&quot;新建发布&quot;"> </p>
-<p>SQL SERVER 2005中的同步复制技术<br>当需要进行服务器名称进行访问内网另一台时，需要修改host文件，新加一行<br>IP地址 服务器名</p>
-<p>一、准备工作： </p>
-<ol>
-<li><p>建立一个 WINDOWS 用户，设置为管理员权限，并设置密码，作为发布快照文件的有效访问用户。 </p>
-</li>
-<li><p>在SQL SERVER下实现发布服务器和订阅服务器的通信正常（即可以互访）。打开1433端口，在防火墙中设特例 </p>
-</li>
-<li><p>在发布服务器上建立一个共享目录，作为发布快照文件的存放目录。例如：在D盘根目录下建文件夹名为SqlCopy </p>
-</li>
-<li><p>设置SQL 代理（发布服务器和订阅服务器均设置） </p>
-</li>
-</ol>
-<p>打开服务(控制面板—管理工具—服务) </p>
-<p>—右击SQLSERVER AGENT—属性—登录—选择“此帐户“ </p>
-<p>—输入或选择第一步中创建的WINDOWS 用户 </p>
-<p>—“密码“中输入该用户密码 </p>
-<ol>
-<li>设置SQL SERVER 身份验证，解决连接时的权限问题（发布、订阅服务器均设置） </li>
-</ol>
-<p>步骤为：对象资源管理器—-右击SQL实例—–属性—-安全性—-服务器身份验证——选“SQL Server和WINDOWS“，然后点确定 </p>
-<ol>
-<li><p>开启SQL Server 2005的网络协议TCP/IP和管道命名协议并重启网络服务。 </p>
-</li>
-<li><p>在SQL Server中创建步骤1中对应的系统用户登陆名，作为发布数据库的拥有者（设置为dbo_owner和public）。 </p>
-</li>
-<li><p>以系统超级用户sa登陆SQL Server建立数据库和表。 </p>
-</li>
-<li><p>发布服务器和订阅服务器互相注册 </p>
-</li>
-</ol>
-<p>步骤如下：视图—-单击以注册服务器—-右键数据库引擎—-新建服务器注册—–填写要注册的远程服务器名称——身份验证选“SQL Server验证“—–用户名(sa) 密码——创建组（也可不建）—–完成。 </p>
-<ol>
-<li>对于只能用IP，不能用计算机名的，为其注册服务器别名 </li>
-</ol>
-<p>二、开始： </p>
-<p>发布服务器配置（在发布服务器上配置发布和订阅） </p>
-<ol>
-<li><p>选择 复制 节点 </p>
-</li>
-<li><p>右键本地发布 —-下一步———系统弹出对话框看提示—-直到“指定快照文件夹“ </p>
-</li>
-</ol>
-<p>—-在“快照文件夹“中输入准备工作中创建的目录(指向步骤3所建的共享文件夹)——选择发布数据库——-选择发布类型——-选择订阅服务器类型——-选择要发布的对象——设置快照代理——-填写发布名称。 </p>
-<ol>
-<li>右键本地订阅——–选择发布服务器——-选择订阅方式（如果是在服务器方订阅的话选择推送订阅反之选择请求订阅）——-填加订阅服务器——–选择代理计划（一般选择连续运行）———其余选择默认项。 </li>
-</ol>
-<p>至此, SQL SERVER 2005 同步复制就完成了。使用复制技术，用户可以将一份客户端的数据发布到多台服务器上，从而使不同的服务器用户都可以在权限的许可的范围内共享这份数据。复制技术可以确保分布在不同地点的数据自动同步更新，从而保证数据的一致性,就无需编程实现客户端和服务器端数据同步了！大大提高了工作效率！</p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://949081653.cn/2017/05/09/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liudade">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="King">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/05/09/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-09T15:18:58+08:00">
-                2017-05-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -1041,6 +486,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -1060,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -1123,6 +581,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、配置是在WebSecurityConfigurerAdapter中的configure-HttpSecurity-http-方法中提供一个默认的配置"><span class="nav-number">1.</span> <span class="nav-text">1、配置是在WebSecurityConfigurerAdapter中的configure(HttpSecurity http)方法中提供一个默认的配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、java配置和表单登录"><span class="nav-number">2.</span> <span class="nav-text">2、java配置和表单登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、验证请求"><span class="nav-number">3.</span> <span class="nav-text">3、验证请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、处理登出"><span class="nav-number">4.</span> <span class="nav-text">4、处理登出</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#LogoutHandler"><span class="nav-number">4.1.</span> <span class="nav-text">LogoutHandler</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#LogoutSuccessHandler"><span class="nav-number">4.2.</span> <span class="nav-text">LogoutSuccessHandler</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5、验证"><span class="nav-number">5.</span> <span class="nav-text">5、验证</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内存中的身份验证"><span class="nav-number">5.1.</span> <span class="nav-text">内存中的身份验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JDBC验证"><span class="nav-number">5.2.</span> <span class="nav-text">JDBC验证</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6、多个HttpSecurity"><span class="nav-number">6.</span> <span class="nav-text">6、多个HttpSecurity</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7、方法安全"><span class="nav-number">7.</span> <span class="nav-text">7、方法安全</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EnableGlobalMethodSecurity"><span class="nav-number">7.1.</span> <span class="nav-text">EnableGlobalMethodSecurity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GlobalMethodSecurityConfiguration"><span class="nav-number">7.2.</span> <span class="nav-text">GlobalMethodSecurityConfiguration</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#已配置对象的后续处理"><span class="nav-number">8.</span> <span class="nav-text">已配置对象的后续处理</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1236,6 +710,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
